@@ -2,6 +2,8 @@ package com.example.pc43.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -19,13 +21,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView=(RecyclerView)findViewById(R.id.recycleview);
         madapter=new Dashboardadapter(nameList);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
+        /*RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(madapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));*/
+        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.setAdapter(madapter);
         data();
     }
     public void data(){
         Name name=new Name("Arup Sarkar");
+        nameList.add(name);
+        name=new Name("Arup Sarkar");
+        nameList.add(name);
+        name=new Name("Arup Sarkar");
+        nameList.add(name);
+        name=new Name("Arup Sarkar");
         nameList.add(name);
         name=new Name("Arup Sarkar");
         nameList.add(name);

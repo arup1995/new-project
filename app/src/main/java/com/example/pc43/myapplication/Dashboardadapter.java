@@ -22,8 +22,8 @@ public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.MyVi
             super(itemView);
             dname=(TextView)itemView.findViewById(R.id.name);
             dimage=(ImageView)itemView.findViewById(R.id.image);
-            dname1=(TextView)itemView.findViewById(R.id.name1);
-            dimage2=(ImageView)itemView.findViewById(R.id.image1);
+            //dname1=(TextView)itemView.findViewById(R.id.name1);
+            //dimage2=(ImageView)itemView.findViewById(R.id.image1);
 
         }
     }
@@ -40,7 +40,7 @@ public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.MyVi
     public void onBindViewHolder(Dashboardadapter.MyViewHolder holder, int position) {
         Name name=nameList.get(position);
         holder.dname.setText(name.getName());
-        holder.dname1.setText(name.getName());
+        //holder.dname1.setText(name.getName());
 
     }
 
